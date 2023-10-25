@@ -1,4 +1,4 @@
-def encode(password):            #encode function made by ALexander
+def encode(password):            #encode function made by Alexander
     output = ""
     for i in password:
         if int(i) < 7:
@@ -10,7 +10,20 @@ def encode(password):            #encode function made by ALexander
         elif i == "9":
             output += "2"
     return output
-#put decode function here 😉
+
+
+def decode(input):  # Decode Function Added By Tyler
+    new_string = ""
+    for i in input:
+        if int(i) > 2:
+            new_string += str(int(i)-3)
+        elif i == "0":
+            new_string += "7"
+        elif i == "1":
+            new_string += "8"
+        elif i == "2":
+            new_string += "9"
+    return new_string
 
 
 if __name__ == "__main__":                    #main function made by Alexander
